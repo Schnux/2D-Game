@@ -12,7 +12,7 @@ public class Bauen : MonoBehaviour {
 	void Update () {
 
 	
-		UnityEngine.Collider[] hitColliders = Physics.OverlapSphere(transform.position, 100, 1);
+	/*	UnityEngine.Collider[] hitColliders = Physics.OverlapSphere(transform.position, 100, 1);
 		int i = 0;
 		while (i < hitColliders.Length)
 		{
@@ -25,7 +25,7 @@ public class Bauen : MonoBehaviour {
 			hitColliders[i]
 
 		
-		}
+		}*/
 	
 	}
 
