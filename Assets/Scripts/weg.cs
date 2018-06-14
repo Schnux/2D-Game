@@ -4,7 +4,8 @@ using System.Collections;
 public class weg : MonoBehaviour {
 
 	public GameObject Material;
-	public static bool Range = true;
+	private bool Range = false;
+	private int touching = 0;
 
 
 
@@ -18,14 +19,34 @@ public class weg : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+
+		if (this.touching == 4) {
+
+			//this.Range = true;
+		
 		}
-	void OnMouseUp()
-	{
-		if (Range == true) {
+
+		}
+	void OnMouseUp(){
+		
+		if (this.Range == true) {
 				Destroy (Material);
 		}
 	}
 
+	void OnTriggerStay2D(Collider2D collidedObject){
+
+		if (collidedObject.tag == "Ground") {
 
 
+	
+			this.touching = this.touching + 1;
+
+
+		} 
+
+
+
+
+}
 }

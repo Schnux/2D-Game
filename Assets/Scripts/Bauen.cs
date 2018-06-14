@@ -2,10 +2,10 @@
 using System.Collections;
 
 public class Bauen : MonoBehaviour {
-
+	
 
 	void Start () {
-	
+		
 	}
 	
 
@@ -22,7 +22,7 @@ public class Bauen : MonoBehaviour {
 	
 		for (int j = 0; j < i; j++) {
 
-			hitColliders[i]
+			hitColliders [i];
 
 		
 		}*/
@@ -31,7 +31,7 @@ public class Bauen : MonoBehaviour {
 
 	public void inRange(){
 
-		weg.Range = true;
+		//weg.Range = true;
 		}
 
 }
