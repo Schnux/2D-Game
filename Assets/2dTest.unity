@@ -223,7 +223,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 557349013}
-  - component: {fileID: 557349012}
+  - component: {fileID: 557349014}
   m_Layer: 0
   m_Name: Handler
   m_TagString: Untagged
@@ -231,25 +231,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &557349012
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 557349011}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 088b77a29b8ca394abd2f718611cc03d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  width: 500
-  hightmultiplier: 10
-  smooth: 19
-  hightAddition: 15
-  Grass: {fileID: 100002, guid: f7e788e8cb031a240a065435420d7906, type: 2}
-  Dirt: {fileID: 100002, guid: a871a83d0fe844840bfe4b6b55931f03, type: 2}
-  Stone: {fileID: 100000, guid: 6073c2935723f71498bcb36ab5ea7543, type: 2}
-  seed: 0
 --- !u!4 &557349013
 Transform:
   m_ObjectHideFlags: 0
@@ -263,6 +244,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &557349014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 557349011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1aa5794e1661a040867f2f399ce21ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chunk: {fileID: 1359314148964758, guid: 14920bb7f14bc254386bbb3b05f0624d, type: 2}
+  numberChunks: 20
 --- !u!1001 &890870170
 Prefab:
   m_ObjectHideFlags: 0

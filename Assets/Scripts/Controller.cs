@@ -29,7 +29,7 @@ public class Controller : MonoBehaviour {
 			landed = false;
 		}
 	}
-	// Update is called once per frame
+
 	void FixedUpdate () {
 		Vector3 localScale = transform.localScale;
 		Vector3 respawn = GameObject.Find("respawn").transform.position;
@@ -67,38 +67,7 @@ public class Controller : MonoBehaviour {
 				transform.localScale = localScale;              
 			}
 		}
-        //Links
-       //if (Input.GetKey ("d")) {
-			//jumpDirection = -1.0f;
-            /*Vector2 left = new Vector2 (playerWalkSpeed * -1.0f * Time.deltaTime, 0.0f);
-           
-            Vector2 move = new Vector2(moveHorizontal, moveVertical);
-            //rb.velocity = move * playerWalkSpeed;
-            rb.AddForce(new Vector2(playerWalkSpeed * -1.0f * Time.deltaTime, 1.0f * Time.deltaTime));*/
-	
-		//Vector3 move = new Vector3 (x * playerWalkSpeed, rb.velocity.y,0f);
-		//rb.velocity = move;
-            //rb.velocity = new Vector2(-1 * playerWalkSpeed, High);
-		//rb.MovePosition(new Vector2 ((transform.position.x * playerWalkSpeed * x),rb.position));
-			//rb.AddForce(Vector2.right * playerWalkSpeed, ForceMode2D.Impulse);
-		//rb.MovePosition (new Vector2((transform.position.x + moveVector.x * playerWalkSpeed * Time.deltaTime),
-		//	transform.position.y + 0 * playerWalkSpeed * Time.deltaTime)); 
-            //transform.Translate(new Vector3((playerWalkSpeed *-1.0f)* Time.deltaTime, 0.0f, 0.0f));
-            
-
-		//}
-		//Rechts
-		/*if (Input.GetKey ("d")) {
-			jumpDirection = 1.0f;
-			transform.Translate(new Vector3(playerWalkSpeed * Time.deltaTime, 0.0f, 0.0f));
-			
-			if(localScale.x < 0.0f)
-			{
-				localScale.x *= -1.0f;
-				transform.localScale = localScale;              
-			}
-		}*/
-
+    
 		if (death == true) {
 			transform.rotation = Quaternion.identity;
 			transform.localPosition = respawn;	
