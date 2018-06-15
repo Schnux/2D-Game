@@ -249,7 +249,7 @@ MonoBehaviour:
   Grass: {fileID: 100002, guid: f7e788e8cb031a240a065435420d7906, type: 2}
   Dirt: {fileID: 100002, guid: a871a83d0fe844840bfe4b6b55931f03, type: 2}
   Stone: {fileID: 100000, guid: 6073c2935723f71498bcb36ab5ea7543, type: 2}
-  seed: 1
+  seed: 0
 --- !u!4 &557349013
 Transform:
   m_ObjectHideFlags: 0
