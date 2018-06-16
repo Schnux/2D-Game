@@ -4,8 +4,8 @@ using System.Collections;
 public class weg : MonoBehaviour {
 
 	public GameObject Material;
-	private bool Range = false;
-	private int touching = 0;
+	public bool Range = false;
+	public int touching = 0;
 
 
 
@@ -22,7 +22,7 @@ public class weg : MonoBehaviour {
 
 		if (this.touching == 4) {
 
-			//this.Range = true;
+			this.Range = true;
 		
 		}
 
@@ -34,7 +34,7 @@ public class weg : MonoBehaviour {
 		}
 	}
 
-	void OnTriggerStay2D(Collider2D collidedObject){
+	void OnTriggerEnter2D(Collider2D collidedObject){
 
 		if (collidedObject.tag == "Ground") {
 
