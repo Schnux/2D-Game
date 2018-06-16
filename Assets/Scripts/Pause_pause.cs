@@ -7,6 +7,7 @@ public class Pause_pause : MonoBehaviour {
     public static bool stopped = false;
 
     public GameObject UI;
+
     
 
     void Update() {
@@ -20,6 +21,11 @@ public class Pause_pause : MonoBehaviour {
             {
                 stop ();
             }
+        }
+        
+        if(Time.timeScale == 1f)
+        {
+            UI.SetActive(false);
         }
     }
 
