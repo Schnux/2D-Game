@@ -13,7 +13,7 @@ public class Chunks : MonoBehaviour {
 	void Start () {
 
 		chunkWidth = chunk.GetComponent<Chunk> ().width;
-		seed = Random.Range (-100000f, 10000f);
+
 		Generate ();
 
 	}
@@ -23,7 +23,7 @@ public class Chunks : MonoBehaviour {
 
 		int lastX = -chunkWidth;
 		for (int i = 0; i < numberChunks; i++) {
-
+			seed = Random.Range (-100000f, 10000f);
 			GameObject newChunk = Instantiate (chunk, new Vector3(lastX + chunkWidth,0f), Quaternion.identity) as GameObject;
 			newChunk.GetComponent<Chunk> ().seed = seed;
 			lastX += chunkWidth;

@@ -551,7 +551,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chunk: {fileID: 1359314148964758, guid: 14920bb7f14bc254386bbb3b05f0624d, type: 2}
-  numberChunks: 20
+  numberChunks: 5
 --- !u!1 &809255720
 GameObject:
   m_ObjectHideFlags: 0
@@ -1207,7 +1207,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 200, y: 1}
+  m_Size: {x: 900, y: 1}
   m_EdgeRadius: 0
 --- !u!4 &1476209849
 Transform:
