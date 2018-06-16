@@ -58,25 +58,26 @@ public class Chunk : MonoBehaviour {
 	public void Resources(){
 		
 		foreach (GameObject t in GameObject.FindGameObjectsWithTag("Stone")) {
-
-			float random = Random.Range (0f, 100f);
+			//if(t.transform.parent == this.gameObject.transform){
+			float r = Random.Range (0f, 100f);
 			GameObject selectedTile = null;
-			if (random <= chanceCopper) {
+			if (r < chanceCopper) {
 
 				selectedTile = Copper_ore;
 
-			} else if(random <= chanceIron){
+			} else if(r < chanceIron){
 
 				selectedTile = Iron_ore;
 		
 		}
 	
 			if (selectedTile != null) {
-				Instantiate (selectedTile, t.transform.position, Quaternion.identity);
+				GameObject newResource= Instantiate (selectedTile, t.transform.position, Quaternion.identity) as GameObject;
+				newResource.transform.parent = transform;
 				Destroy (t);
 			}
-	}
+	//}
 }
-
+}
 
 }
