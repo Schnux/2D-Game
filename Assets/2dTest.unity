@@ -623,7 +623,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chunk: {fileID: 1359314148964758, guid: 14920bb7f14bc254386bbb3b05f0624d, type: 2}
-  numberChunks: 5
+  numberChunks: 1
 --- !u!1 &579447311
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,8 +4,8 @@ using System.Collections;
 public class weg : MonoBehaviour {
 
 	public GameObject Material;
-	public bool Range = false;
-	public int touching = 0;
+	private bool Range = false;
+	private int touching = 0;
 
 
 
@@ -13,17 +13,16 @@ public class weg : MonoBehaviour {
 
 
 	void Start () {
-	
+		nextto ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-
-
-		if (this.touching == 4) {
+		
+		if (this.touching == 2) {
 
 			this.Range = true;
-		
+			//|| Material.transform.position.x == Material.transform.position.x - 1)
 		}
 
 		}
@@ -34,7 +33,7 @@ public class weg : MonoBehaviour {
 		}
 	}
 
-	void OnTriggerEnter2D(Collider2D collidedObject){
+	void OnCollisionEnte2D(Collider2D collidedObject){
 
 		if (collidedObject.tag == "Ground") {
 
@@ -45,8 +44,22 @@ public class weg : MonoBehaviour {
 
 		} 
 
+	
+
 
 
 
 }
+
+	public void nextto(){
+
+		if (Mathf.Abs(Material.transform.position.x - Material.transform.position.x)< 1 ) {
+			this.touching = this.touching + 1;
+			Debug.LogError (this.Material.transform.position.x);
+		}
+		if (Mathf.Abs(Material.transform.position.y - Material.transform.position.y)< 1 ) {
+			this.touching = this.touching + 1;
+			Debug.LogError (touching);
+		}
+	}
 }
