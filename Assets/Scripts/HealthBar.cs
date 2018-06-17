@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class HealthBar : MonoBehaviour {
 
-    public float health = 1.0f;
+    public static float health = 1.0f;
 
  //   void Start()
  //   {
