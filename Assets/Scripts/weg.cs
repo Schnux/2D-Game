@@ -6,6 +6,7 @@ public class weg : MonoBehaviour {
 	public GameObject Material;
 	public bool Range = false;
 	public int touching = 0;
+	public bool breakable = false;
 
 
 
@@ -14,6 +15,7 @@ public class weg : MonoBehaviour {
 
 	void Start () {
 		nextto ();
+	
 	}
 	
 	// Update is called once per frame
@@ -22,7 +24,7 @@ public class weg : MonoBehaviour {
 		if (this.touching < 8) {
 
 			this.Range = true;
-			//|| Material.transform.position.x == Material.transform.position.x - 1)
+
 		}
 		this.touching = 0;
 		nextto ();
@@ -31,7 +33,7 @@ public class weg : MonoBehaviour {
 		}
 	void OnMouseUp(){
 		
-		if (this.Range == true) {
+		if (this.Range == true && this.breakable == true) {
 				Destroy (Material);
 		}
 	

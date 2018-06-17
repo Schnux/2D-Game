@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 61568283792467044}
   - component: {fileID: 114941488075564748}
   - component: {fileID: 114439663779237072}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Copper_Ore
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4225073439240470}
   - component: {fileID: 212949819928726636}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Copper_Ore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -111,6 +111,7 @@ MonoBehaviour:
   Material: {fileID: 1149485591422002}
   Range: 0
   touching: 0
+  breakable: 0
 --- !u!114 &114941488075564748
 MonoBehaviour:
   m_ObjectHideFlags: 1
