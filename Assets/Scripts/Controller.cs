@@ -18,10 +18,11 @@ public class Controller : MonoBehaviour {
 	public static bool testrange = false;
 	public Rigidbody2D rb;
 	private Vector2 velocity;
+
 	// Use this for initialization
 	void Start () {
 		rb = GetComponent<Rigidbody2D>();
-	
+
 
 	}
 	void Update(){
@@ -30,8 +31,8 @@ public class Controller : MonoBehaviour {
 			landed = false;
 		}
 
-
-
+	
+	
 	}
 
 	void FixedUpdate () {

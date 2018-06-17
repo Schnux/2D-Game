@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4247032447443958}
   - component: {fileID: 212525002913794878}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Iron_Ore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 61307035671123792}
   - component: {fileID: 114716162087617168}
   - component: {fileID: 114523628663626262}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Iron_Ore
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -111,6 +111,7 @@ MonoBehaviour:
   Material: {fileID: 1654031867221150}
   Range: 0
   touching: 0
+  breakable: 0
 --- !u!114 &114716162087617168
 MonoBehaviour:
   m_ObjectHideFlags: 1

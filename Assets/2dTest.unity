@@ -1398,48 +1398,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 114580643566064108, guid: b0a7681e86d289345b4a4d45728bbd41,
-        type: 2}
-      propertyPath: jumpVelocity
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 114580643566064108, guid: b0a7681e86d289345b4a4d45728bbd41,
-        type: 2}
-      propertyPath: rb
-      value: 
-      objectReference: {fileID: 1023767915}
-    - target: {fileID: 114580643566064108, guid: b0a7681e86d289345b4a4d45728bbd41,
-        type: 2}
-      propertyPath: playerWalkSpeed
-      value: 270
-      objectReference: {fileID: 0}
-    - target: {fileID: 114580643566064108, guid: b0a7681e86d289345b4a4d45728bbd41,
-        type: 2}
-      propertyPath: jumpForce
-      value: 21
-      objectReference: {fileID: 0}
-    - target: {fileID: 4737939656648528, guid: b0a7681e86d289345b4a4d45728bbd41, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -0.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 114580643566064108, guid: b0a7681e86d289345b4a4d45728bbd41,
-        type: 2}
-      propertyPath: maxSpeed
-      value: 7.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4737939656648528, guid: b0a7681e86d289345b4a4d45728bbd41, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 0.32
-      objectReference: {fileID: 0}
-    - target: {fileID: 58214088856706134, guid: b0a7681e86d289345b4a4d45728bbd41,
-        type: 2}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1618116610169222, guid: b0a7681e86d289345b4a4d45728bbd41, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b0a7681e86d289345b4a4d45728bbd41, type: 2}
   m_IsPrefabParent: 0
@@ -1471,11 +1429,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &1023767915 stripped
-Rigidbody2D:
-  m_PrefabParentObject: {fileID: 50545897882343108, guid: b0a7681e86d289345b4a4d45728bbd41,
-    type: 2}
-  m_PrefabInternal: {fileID: 890870170}
 --- !u!114 &1041071456 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114035077962184688, guid: 6a400c6b36763d14885cc9a88d24ad4c,
