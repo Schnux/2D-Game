@@ -55,7 +55,7 @@ public class weg : MonoBehaviour {
 
 		if (Mathf.Abs(Material.transform.position.x - Material.transform.position.x)< 1 ) {
 			this.touching = this.touching + 1;
-			Debug.LogError (this.Material.transform.position.x);
+			Debug.LogError (this.transform.position.x - Material.transform.position.x);
 		}
 		if (Mathf.Abs(Material.transform.position.y - Material.transform.position.y)< 1 ) {
 			this.touching = this.touching + 1;
