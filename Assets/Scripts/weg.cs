@@ -4,8 +4,8 @@ using System.Collections;
 public class weg : MonoBehaviour {
 
 	public GameObject Material;
-	private bool Range = false;
-	private int touching = 0;
+	public bool Range = false;
+	public int touching = 0;
 
 
 
@@ -19,11 +19,14 @@ public class weg : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		
-		if (this.touching == 2) {
+		if (this.touching < 8) {
 
 			this.Range = true;
 			//|| Material.transform.position.x == Material.transform.position.x - 1)
 		}
+		this.touching = 0;
+		nextto ();
+
 
 		}
 	void OnMouseUp(){
@@ -31,9 +34,10 @@ public class weg : MonoBehaviour {
 		if (this.Range == true) {
 				Destroy (Material);
 		}
+	
 	}
 
-	void OnCollisionEnte2D(Collider2D collidedObject){
+	/*void OnCollisionEnte2D(Collider2D collidedObject){
 
 		if (collidedObject.tag == "Ground") {
 
@@ -49,17 +53,29 @@ public class weg : MonoBehaviour {
 
 
 
-}
+}*/
 
 	public void nextto(){
 
-		if (Mathf.Abs(Material.transform.position.x - Material.transform.position.x)< 1 ) {
+	/*	if (Mathf.Abs(Material.transform.position.x - Material.transform.position.x)< 1 ) {
 			this.touching = this.touching + 1;
 			Debug.LogError (this.transform.position.x - Material.transform.position.x);
 		}
 		if (Mathf.Abs(Material.transform.position.y - Material.transform.position.y)< 1 ) {
 			this.touching = this.touching + 1;
 			Debug.LogError (touching);
+		}
+		*/
+		Collider2D[] hits = Physics2D.OverlapCircleAll (transform.position, 1f);
+
+		foreach(Collider2D hit in hits){
+
+			if (hit.tag == "Ground") {
+
+				this.touching = this.touching + 1;
+				//Debug.LogError (touching);
+			}
+
 		}
 	}
 }
