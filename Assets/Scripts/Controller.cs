@@ -11,6 +11,7 @@ public class Controller : MonoBehaviour {
     public float jumpForce;
     public float High;
 
+
     private float jumpDirection;
 	public static bool landed = true;
 	public static bool death = false;
@@ -70,7 +71,8 @@ public class Controller : MonoBehaviour {
 				transform.localScale = localScale;              
 			}
 		}
-    
+
+
 		if (death == true) {
 			transform.rotation = Quaternion.identity;
 			transform.localPosition = respawn;	
