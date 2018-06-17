@@ -20,10 +20,7 @@ public class HealthBar : MonoBehaviour {
 
         Image image = GetComponent<Image>();
         image.fillAmount = health;
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            health -= 0.1f;
-        }
+
 
         if (health < 0.0f)
         {
