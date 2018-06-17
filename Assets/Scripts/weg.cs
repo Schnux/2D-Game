@@ -6,7 +6,10 @@ public class weg : MonoBehaviour {
 	public GameObject Material;
 	public bool Range = false;
 	public int touching = 0;
+<<<<<<< HEAD
 	public bool breakable = false;
+=======
+>>>>>>> f6de22f... removeing blocks now work
 
 
 
