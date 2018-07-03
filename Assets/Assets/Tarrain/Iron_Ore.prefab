@@ -36,8 +36,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4385977918725818}
   - component: {fileID: 61307035671123792}
-  - component: {fileID: 114716162087617168}
-  - component: {fileID: 114523628663626262}
+  - component: {fileID: 114095848188643654}
+  - component: {fileID: 114999026099518820}
   m_Layer: 8
   m_Name: Iron_Ore
   m_TagString: Ground
@@ -97,7 +97,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.5, y: 2.5}
   m_EdgeRadius: 0
---- !u!114 &114523628663626262
+--- !u!114 &114095848188643654
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -105,14 +105,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1654031867221150}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 133a2eb54298c144987a925086d966cd, type: 3}
+  m_Script: {fileID: 11500000, guid: ee2d20dbddd162b4caecb077a1e9154d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Material: {fileID: 1654031867221150}
   Range: 0
   touching: 0
   breakable: 0
---- !u!114 &114716162087617168
+  inventory: {fileID: 0}
+  item: {fileID: 0}
+--- !u!114 &114999026099518820
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -120,7 +122,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1654031867221150}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b18752bb8100b29449367791dece09ce, type: 3}
+  m_Script: {fileID: 11500000, guid: 2c48cf5c246e9f74b9e33b89ace087d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!212 &212525002913794878

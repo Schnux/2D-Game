@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 400002}
   - component: {fileID: 6100000}
   - component: {fileID: 11400000}
-  - component: {fileID: 11400002}
+  - component: {fileID: 114962504292372724}
   m_Layer: 8
   m_Name: Grass
   m_TagString: Ground
@@ -97,21 +97,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b18752bb8100b29449367791dece09ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &11400002
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100002}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 133a2eb54298c144987a925086d966cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Material: {fileID: 100002}
-  Range: 0
-  touching: 0
-  breakable: 0
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -167,3 +152,20 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 100002}
   m_IsPrefabParent: 1
+--- !u!114 &114962504292372724
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8076441481122184293b59e6ef5d41dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Material: {fileID: 100002}
+  Range: 0
+  touching: 0
+  breakable: 0
+  inventory: {fileID: 0}
+  item: {fileID: 0}

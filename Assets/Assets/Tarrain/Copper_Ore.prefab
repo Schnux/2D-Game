@@ -20,8 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4655383529246688}
   - component: {fileID: 61568283792467044}
-  - component: {fileID: 114941488075564748}
-  - component: {fileID: 114439663779237072}
+  - component: {fileID: 114538341238111662}
+  - component: {fileID: 114360086085994748}
   m_Layer: 8
   m_Name: Copper_Ore
   m_TagString: Ground
@@ -97,7 +97,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.5, y: 2.5}
   m_EdgeRadius: 0
---- !u!114 &114439663779237072
+--- !u!114 &114360086085994748
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -105,24 +105,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 1149485591422002}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 133a2eb54298c144987a925086d966cd, type: 3}
+  m_Script: {fileID: 11500000, guid: e57b6aa078f122c4b967a842a6059ad2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114538341238111662
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1149485591422002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fde1f30674d70b94181e0f354afcfdf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Material: {fileID: 1149485591422002}
   Range: 0
   touching: 0
   breakable: 0
---- !u!114 &114941488075564748
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1149485591422002}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b18752bb8100b29449367791dece09ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  inventory: {fileID: 0}
+  item: {fileID: 0}
 --- !u!212 &212949819928726636
 SpriteRenderer:
   m_ObjectHideFlags: 1

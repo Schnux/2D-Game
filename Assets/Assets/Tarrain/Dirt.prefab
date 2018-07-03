@@ -25,8 +25,8 @@ GameObject:
   m_Component:
   - component: {fileID: 400002}
   - component: {fileID: 6100000}
-  - component: {fileID: 11400000}
-  - component: {fileID: 11400002}
+  - component: {fileID: 114750354830686098}
+  - component: {fileID: 114989969343019290}
   m_Layer: 8
   m_Name: Dirt
   m_TagString: Ground
@@ -86,32 +86,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.5, y: 2.5}
   m_EdgeRadius: 0
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100002}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b18752bb8100b29449367791dece09ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &11400002
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100002}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 133a2eb54298c144987a925086d966cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Material: {fileID: 100002}
-  Range: 0
-  touching: 0
-  breakable: 0
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -167,3 +141,31 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 100002}
   m_IsPrefabParent: 1
+--- !u!114 &114750354830686098
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5637d72dab7ce7d4ab80608da1d7310c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Material: {fileID: 100002}
+  Range: 0
+  touching: 0
+  breakable: 0
+  inventory: {fileID: 0}
+  item: {fileID: 0}
+--- !u!114 &114989969343019290
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41823d9c75b693c47b9f9361656e757f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

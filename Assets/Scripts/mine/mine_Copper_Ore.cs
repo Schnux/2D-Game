@@ -1,12 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class weg : MonoBehaviour {
+public class mine_Copper_Ore : MonoBehaviour {
 
 	public GameObject Material;
 	public bool Range = false;
 	public int touching = 0;
 	public bool breakable = false;
+	public Inventory inventory;
+	public InventoryItemBase item;
 
 
 
@@ -15,12 +17,14 @@ public class weg : MonoBehaviour {
 
 	void Start () {
 		nextto ();
-	
+		item = FindObjectOfType<Copper_Ore> ();
+		inventory = FindObjectOfType<Inventory> ();
+
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
-		
+
 		if (this.touching < 8) {
 
 			this.Range = true;
@@ -30,17 +34,23 @@ public class weg : MonoBehaviour {
 		nextto ();
 
 
-		}
-	void OnMouseUp(){
-		
-		if (this.Range == true && this.breakable == true) {
-				Destroy (Material);
-
-
-		}
-	
 	}
-		
+	void OnMouseUp(){
+
+		if (this.Range == true && this.breakable == true) {
+			Destroy (Material);
+
+			if (item != null){
+				inventory.AddItem(item);
+			}
+
+
+
+		}
+
+	}
+
+
 
 	public void nextto(){
 

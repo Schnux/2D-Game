@@ -9,8 +9,8 @@ GameObject:
   m_Component:
   - component: {fileID: 400000}
   - component: {fileID: 6100000}
-  - component: {fileID: 11400000}
   - component: {fileID: 11400002}
+  - component: {fileID: 114856196232916124}
   m_Layer: 8
   m_Name: Stone
   m_TagString: Ground
@@ -86,17 +86,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.5, y: 2.5}
   m_EdgeRadius: 0
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b18752bb8100b29449367791dece09ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -112,6 +101,8 @@ MonoBehaviour:
   Range: 0
   touching: 0
   breakable: 0
+  inventory: {fileID: 0}
+  item: {fileID: 0}
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -167,3 +158,14 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 100000}
   m_IsPrefabParent: 1
+--- !u!114 &114856196232916124
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dc6c86754875f54bbaa1a6bd143b352, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
