@@ -8,5 +8,6 @@ public class Grass : InventoryItemBase {
 	{
 		// TODO: Do something with the object.... next tutorial!
 		base.OnUse();
+
 	}
 }
