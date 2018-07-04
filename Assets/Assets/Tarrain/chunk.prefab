@@ -67,7 +67,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 088b77a29b8ca394abd2f718611cc03d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  width: 25
+  width: 29
   hightmultiplier: 10
   smooth: 19
   hightAddition: 15

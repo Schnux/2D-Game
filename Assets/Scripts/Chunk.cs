@@ -58,7 +58,7 @@ public class Chunk : MonoBehaviour {
 	public void Resources(){
 		
 		foreach (GameObject t in GameObject.FindGameObjectsWithTag("Stone")) {
-			//if(t.transform.parent == this.gameObject.transform){
+			if(t.transform.parent == this.gameObject.transform){
 			float r = Random.Range (0f, 100f);
 			GameObject selectedTile = null;
 			if (r < chanceCopper) {
@@ -76,7 +76,7 @@ public class Chunk : MonoBehaviour {
 				newResource.transform.parent = transform;
 				Destroy (t);
 			}
-	//}
+	}
 }
 }
 

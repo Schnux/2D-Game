@@ -42,6 +42,7 @@ public class mine_Copper_Ore : MonoBehaviour {
 
 			if (item != null){
 				inventory.AddItem(item);
+				inventory.RemoveItem (item);
 			}
 
 

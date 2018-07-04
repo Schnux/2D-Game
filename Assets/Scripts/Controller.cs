@@ -19,10 +19,11 @@ public class Controller : MonoBehaviour {
 	public Rigidbody2D rb;
 	private Vector2 velocity;
 
+	public Chunk chunk;
 	// Use this for initialization
 	void Start () {
 		rb = GetComponent<Rigidbody2D>();
-
+		chunk = GetComponent<Chunk> ();
 
 	}
 	void Update(){
@@ -30,6 +31,7 @@ public class Controller : MonoBehaviour {
 			rb.AddForce (Vector2.up * jumpForce, ForceMode2D.Impulse);
 			landed = false;
 		}
+
 
 	
 	
