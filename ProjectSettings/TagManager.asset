@@ -8,6 +8,7 @@ TagManager:
   - Bauen
   - Stone
   - Chunk
+  - Grass
   layers:
   - Default
   - TransparentFX

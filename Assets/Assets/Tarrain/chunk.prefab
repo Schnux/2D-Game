@@ -76,6 +76,8 @@ MonoBehaviour:
   Stone: {fileID: 100000, guid: 6073c2935723f71498bcb36ab5ea7543, type: 2}
   Iron_ore: {fileID: 1654031867221150, guid: d2bb185ff5961174c8fc9f87e4301067, type: 2}
   Copper_ore: {fileID: 1149485591422002, guid: af94a2d2ffcab314692b59e1b94ab43d, type: 2}
+  Baum: {fileID: 1375397493063372, guid: f732a6225b458e640a064f62f899c423, type: 2}
   chanceIron: 5
   chanceCopper: 1
+  chanceTree: 10
   seed: 0

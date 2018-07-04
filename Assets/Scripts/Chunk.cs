@@ -12,9 +12,11 @@ public class Chunk : MonoBehaviour {
 	public GameObject Stone;
 	public GameObject Iron_ore;
 	public GameObject Copper_ore;
+	public GameObject Baum;
 
 	public float chanceIron;
 	public float chanceCopper;
+	public float chanceTree;
 
 	public float seed;
 
@@ -52,6 +54,7 @@ public class Chunk : MonoBehaviour {
   		}
 
 		Resources ();
+		Tree ();
 	
 	}
 
@@ -79,5 +82,26 @@ public class Chunk : MonoBehaviour {
 	}
 }
 }
+	public void Tree(){
 
+		foreach (GameObject t in GameObject.FindGameObjectsWithTag("Grass")) {
+			if(t.transform.parent == this.gameObject.transform){
+				float r = Random.Range (0f, 100f);
+				GameObject selectedTile = null;
+				if (r < chanceTree) {
+
+					selectedTile = Baum;
+
+
+				}
+
+				if (selectedTile != null) {
+					GameObject newTree = Instantiate (selectedTile, t.transform.position, Quaternion.identity) as GameObject;
+					newTree.transform.parent = transform;
+					Destroy (t);
+				}
+			}
+		}
+
+	}
 }
