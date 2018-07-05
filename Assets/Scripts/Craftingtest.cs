@@ -5,9 +5,11 @@ using UnityEngine.UI;
 public class Craftingtest : MonoBehaviour
 {
 
-    public GameObject Panel;
-    int offen;
+    public GameObject PanelEins;
+    public GameObject PanelZwei;
 
+    int offen;
+    int offenzwei;
     public void Update()
     {
         
@@ -18,11 +20,30 @@ public class Craftingtest : MonoBehaviour
 
 
         if (offen % 2 == 1)
-        { Panel.gameObject.SetActive(false); }
+        { PanelEins.gameObject.SetActive(false); }
         else
-        { Panel.gameObject.SetActive(true); }
+        { PanelEins.gameObject.SetActive(true);
+            PanelZwei.gameObject.SetActive(false);
+            offenzwei++;
+        }
 
         offen++;
+
+    }
+    public void hideshowPanelzwei()
+    {
+
+
+        if (offenzwei % 2 == 1)
+        { PanelZwei.gameObject.SetActive(false);
+        }
+        else
+        { PanelZwei.gameObject.SetActive(true);
+            PanelEins.gameObject.SetActive(false);
+            offen++;
+        }
+
+        offenzwei++;
 
     }
 }
