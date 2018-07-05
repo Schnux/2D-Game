@@ -15,14 +15,25 @@ public class CraftingScript : MonoBehaviour {
     void Update() {
 
     }
-    public void Craften()
-    {
-        item = FindObjectOfType<Copper_Ore>();
-        inventory.AddItem(item);
-    }
-    public void Craftenzwei()
+    public void IronIngotCraften()
     {
         item = FindObjectOfType<Iron_Ore>();
+        inventory.RemoveItem(item);
+        item = FindObjectOfType<Copper_Ore>(); //Ingot item dann noch einfügen
+        inventory.AddItem(item);
+    }
+    public void CopperIngotCraften()
+    {
+        item = FindObjectOfType<Copper_Ore>();
+        inventory.RemoveItem(item);
+        item = FindObjectOfType<Iron_Ore>(); //ingot item dann noch einfügen
+        inventory.AddItem(item);
+    }
+    public void HolzCraften()
+    {
+        item = FindObjectOfType<Log>();
+        inventory.RemoveItem(item);
+        item = FindObjectOfType<Iron_Ore>(); //holz dann noch einfügen
         inventory.AddItem(item);
     }
 }
