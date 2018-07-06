@@ -10,6 +10,9 @@ public class Controller : MonoBehaviour {
 	public float playerJumpForceVertical;
     public float jumpForce;
     public float High;
+	private GameObject newBlock;
+	public GameObject Dirt;
+	public string Material_Name;
 
 
     private float jumpDirection;
@@ -18,24 +21,43 @@ public class Controller : MonoBehaviour {
 	public static bool testrange = false;
 	public Rigidbody2D rb;
 	private Vector2 velocity;
-
+	private InventoryItemBase inventoryItemBase;
 	public Chunk chunk;
 	// Use this for initialization
 	void Start () {
 		rb = GetComponent<Rigidbody2D>();
 		chunk = GetComponent<Chunk> ();
 
+
 	}
+		
 	void Update(){
 		if (Input.GetButtonDown ("Jump") && landed == true) {
 			rb.AddForce (Vector2.up * jumpForce, ForceMode2D.Impulse);
 			landed = false;
 		}
+		//Material_Name = inventoryItemBase.GetName ();
+		/*if (Input.GetMouseButtonDown (1)) {
+			newBlock.transform.localPosition = Input.mousePosition;
+			Instantiate (newBlock);
 
+		}
+	
 
-	
-	
+		if(Input.GetKeyDown(KeyCode.O)){
+			Material_Name = "Dirt";
+
+		}
+		if (Material_Name == "Dirt") {
+
+			newBlock = Dirt;
+		}*/
+			
 	}
+
+
+
+
 
 	void FixedUpdate () {
 		Vector3 localScale = transform.localScale;

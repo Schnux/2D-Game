@@ -11,6 +11,8 @@ public class ItemClickHandler : MonoBehaviour
 
     private Button _button;
 
+
+
     void Awake()
     {
         _button = GetComponent<Button>();
@@ -54,7 +56,10 @@ public class ItemClickHandler : MonoBehaviour
 
         if (item != null)
         {
-            _Inventory.UseItem(item);
+
+			_Inventory.UseItem(item);
+		
+
         }
     }
 
