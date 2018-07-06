@@ -21,7 +21,35 @@ public class Craftingtest : MonoBehaviour
     private bool offensieben = false;
     public void Update()
     {
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            anfangpanel();
+        }
+    }
+
+    public void anfangpanel()
+    {
+
+
+       
+            PanelZwei.gameObject.SetActive(false);
+            offenzwei = false;
+            PanelDrei.gameObject.SetActive(false);
+            offendrei = false;
+            PanelVier.gameObject.SetActive(false);
+            offenvier = false;
+            PanelFuenf.gameObject.SetActive(false);
+            offenfuenf = false;
+            PanelSechs.gameObject.SetActive(false);
+            offensechs = false;
+            PanelSieben.gameObject.SetActive(false);
+            offensieben = false;
+            PanelEins.gameObject.SetActive(true);
+            offen = true;
+
         
+
+
 
     }
     public void hideshowPanel()
