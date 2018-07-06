@@ -8,7 +8,7 @@ public class Craftingtest : MonoBehaviour
     public GameObject PanelEins;
     public GameObject PanelZwei;
     public GameObject PanelDrei;
-    private bool offen = true;
+    private bool offen = false;
     private bool offenzwei = false;
     private bool offendrei = false;
     public void Update()
@@ -25,13 +25,14 @@ public class Craftingtest : MonoBehaviour
             offen = false;
         }
         else
-        { PanelEins.gameObject.SetActive(true);
-            
-            offen = true;
+        {
             PanelZwei.gameObject.SetActive(false);
             offenzwei = false;
-            PanelZwei.gameObject.SetActive(false);
+            PanelDrei.gameObject.SetActive(false);
             offendrei = false;
+            PanelEins.gameObject.SetActive(true);
+          offen = true;
+            
         }
 
         
@@ -46,12 +47,14 @@ public class Craftingtest : MonoBehaviour
             offenzwei = false;
         }
         else
-        { PanelZwei.gameObject.SetActive(true);
-            offenzwei = true;
+        {
             PanelEins.gameObject.SetActive(false);
             offen = false;
-            PanelZwei.gameObject.SetActive(false);
+            PanelDrei.gameObject.SetActive(false);
             offendrei = false;
+            PanelZwei.gameObject.SetActive(true);
+            offenzwei = true;
+            
         }
 
         
@@ -68,13 +71,13 @@ public class Craftingtest : MonoBehaviour
         }
         else
         {
-            PanelDrei.gameObject.SetActive(true);
-            offendrei = true;
             PanelEins.gameObject.SetActive(false);
             offen = false;
             PanelZwei.gameObject.SetActive(false);
             offenzwei = false;
-
+            PanelDrei.gameObject.SetActive(true);
+            offendrei = true;
+           
         }
 
 
