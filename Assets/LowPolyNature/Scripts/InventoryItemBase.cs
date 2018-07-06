@@ -29,7 +29,7 @@ public class InteractableItemBase : MonoBehaviour
 
 public class InventoryItemBase : InteractableItemBase
 {
-
+	public string test;
 	public InventorySlot Slot
     {
         get; set;
@@ -41,7 +41,7 @@ public class InventoryItemBase : InteractableItemBase
     {
         transform.localPosition = PickPosition;
         transform.localEulerAngles = PickRotation;
-		GetName ();
+		GetName (Name);
 
     }
 
@@ -72,11 +72,17 @@ public class InventoryItemBase : InteractableItemBase
 
     public bool UseItemAfterPickup = false;
 
-	public string GetName(){
-		string name;
+	public void GetName(string name){
+		
 
-		name = Name;
-		return name;
+		test = name;
+		Block_Name ();
+
+	}
+
+	public string Block_Name(){
+
+		return test;
 
 	}
 }

@@ -27,6 +27,7 @@ public class Controller : MonoBehaviour {
 	void Start () {
 		rb = GetComponent<Rigidbody2D>();
 		chunk = GetComponent<Chunk> ();
+		inventoryItemBase = GetComponent<Dirt> ();
 
 
 	}
@@ -36,7 +37,8 @@ public class Controller : MonoBehaviour {
 			rb.AddForce (Vector2.up * jumpForce, ForceMode2D.Impulse);
 			landed = false;
 		}
-		//Material_Name = inventoryItemBase.GetName ();
+		Material_Name = inventoryItemBase.Block_Name ();
+	
 		/*if (Input.GetMouseButtonDown (1)) {
 			newBlock.transform.localPosition = Input.mousePosition;
 			Instantiate (newBlock);
