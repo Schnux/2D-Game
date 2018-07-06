@@ -8,8 +8,8 @@ public class Craftingtest : MonoBehaviour
     public GameObject PanelEins;
     public GameObject PanelZwei;
 
-    int offen;
-    int offenzwei;
+    private bool offen = true;
+    private bool offenzwei = false;
     public void Update()
     {
         
@@ -19,31 +19,38 @@ public class Craftingtest : MonoBehaviour
     {
 
 
-        if (offen % 2 == 1)
-        { PanelEins.gameObject.SetActive(false); }
+        if (offen == true)
+        { PanelEins.gameObject.SetActive(false);
+            offen = false;
+        }
         else
         { PanelEins.gameObject.SetActive(true);
+            
+            offen = true;
             PanelZwei.gameObject.SetActive(false);
-            offenzwei++;
+            offenzwei = false;
         }
 
-        offen++;
+        
 
     }
     public void hideshowPanelzwei()
     {
 
 
-        if (offenzwei % 2 == 1)
+        if (offenzwei == true)
         { PanelZwei.gameObject.SetActive(false);
+            offenzwei = false;
         }
         else
         { PanelZwei.gameObject.SetActive(true);
+            offenzwei = true;
             PanelEins.gameObject.SetActive(false);
-            offen++;
+            offen = false;
+
         }
 
-        offenzwei++;
+        
 
     }
 }
