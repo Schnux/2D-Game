@@ -87,7 +87,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: plank
-  Image: {fileID: 0}
+  Image: {fileID: 21300000, guid: cdca1a7ff8d7fa94dae68c68218a47d6, type: 3}
   InteractText: Press F to pickup the item
   ItemType: 0
   test: 
