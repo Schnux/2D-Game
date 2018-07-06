@@ -10,6 +10,7 @@ public enum EItemType
 }
 
 public class InteractableItemBase : MonoBehaviour
+
 {
     public string Name;
 
@@ -28,15 +29,20 @@ public class InteractableItemBase : MonoBehaviour
 
 public class InventoryItemBase : InteractableItemBase
 {
-    public InventorySlot Slot
+
+	public InventorySlot Slot
     {
         get; set;
     }
 
-    public virtual void OnUse()
+
+
+	public virtual void OnUse()
     {
         transform.localPosition = PickPosition;
         transform.localEulerAngles = PickRotation;
+		GetName ();
+
     }
 
     public virtual void OnDrop()
@@ -66,5 +72,11 @@ public class InventoryItemBase : InteractableItemBase
 
     public bool UseItemAfterPickup = false;
 
+	public string GetName(){
+		string name;
 
+		name = Name;
+		return name;
+
+	}
 }
