@@ -3,35 +3,46 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class Enemy_Controller : MonoBehaviour
+public class EnemyController : MonoBehaviour
 {
 
-    public float lookRadius = 10f;
+    //public float lookRadius = 10f;
+
+    public float speed;
 
       Transform target;
-    NavMeshAgent agent;
+    //NavMeshAgent agent;
 
     void Start()
     {
-        target = PlayerE.instance.Player.transform;
-          agent = GetComponent<NavMeshAgent>();
+        target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        //target = PlayerE.instance.Player.transform;
+          //agent = GetComponent<NavMeshAgent>();
     }
 
     void Update()
     {
-        float distance = Vector2.Distance(target.position, transform. position);
 
-        if (distance <= lookRadius)
+
+        if(Vector2.Distance(transform.position, target.position) > 20)
         {
-            agent.SetDestination(target.position);
+            transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
         }
 
+
+        //float distance = Vector3.Distance(target.position, transform. position);
+
+        //if (distance <= lookRadius)
+        //{
+         //   agent.SetDestination(target.position);
+        //}
+
     }
 
-    void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, lookRadius);
-    }
+    //void OnDrawGizmosSelected()
+    //{
+      //  Gizmos.color = Color.red;
+        //Gizmos.DrawWireSphere(transform.position, lookRadius);
+    //}
 
 }

@@ -632,7 +632,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -700,7 +700,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 177314196}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.07, y: 19.86, z: 0}
+  m_LocalPosition: {x: 6.07, y: 30.44, z: 0}
   m_LocalScale: {x: 8, y: 8, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -713,7 +713,7 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 177314196}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -735,7 +735,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.2
-  m_Speed: 2
+  m_Speed: 53.5
   m_Acceleration: 20
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -758,6 +758,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38417eba9dad6bc4a91333960f156270, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 35.58
 --- !u!1 &189717159
 GameObject:
   m_ObjectHideFlags: 0
@@ -3630,6 +3631,10 @@ Prefab:
       value: 
       objectReference: {fileID: 114842505335495494, guid: 14920bb7f14bc254386bbb3b05f0624d,
         type: 2}
+    - target: {fileID: 1005511444263886, guid: b0a7681e86d289345b4a4d45728bbd41, type: 2}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b0a7681e86d289345b4a4d45728bbd41, type: 2}
   m_IsPrefabParent: 0
@@ -6733,7 +6738,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1548179203
 MonoBehaviour:
   m_ObjectHideFlags: 0
