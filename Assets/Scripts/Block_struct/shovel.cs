@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class wood : InventoryItemBase
+public class shovel : InventoryItemBase
 {
 
     public override void OnUse()

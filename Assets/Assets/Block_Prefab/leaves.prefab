@@ -86,8 +86,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06a4858ca750e60439091b70267b5f74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: 
-  Image: {fileID: 0}
+  Name: leaves
+  Image: {fileID: 21300000, guid: e07164a9d7676c64c877ef6f31b829f6, type: 3}
   InteractText: Press F to pickup the item
   ItemType: 0
   test: 
