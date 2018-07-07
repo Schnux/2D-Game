@@ -5,6 +5,7 @@ using UnityEngine;
 public class CraftingScript : MonoBehaviour {
     private Inventory inventory;
     public InventoryItemBase item;
+ 
     // Use this for initialization
     void Start() {
         
@@ -17,23 +18,75 @@ public class CraftingScript : MonoBehaviour {
     }
     public void IronIngotCraften()
     {
-        item = FindObjectOfType<Iron_Ore>();
-        inventory.RemoveItem(item);
-        item = FindObjectOfType<Copper_Ore>(); //Ingot item dann noch einfügen
-        inventory.AddItem(item);
+       
+        
+            item = FindObjectOfType<Iron_Ore>();
+            inventory.RemoveItem(item);
+            item = FindObjectOfType<iron_ingot>(); //Ingot item dann noch einfügen
+            inventory.AddItem(item);
+        
+        
     }
     public void CopperIngotCraften()
     {
         item = FindObjectOfType<Copper_Ore>();
         inventory.RemoveItem(item);
-        item = FindObjectOfType<Iron_Ore>(); //ingot item dann noch einfügen
+        item = FindObjectOfType<copper_ingot>(); //ingot item dann noch einfügen
         inventory.AddItem(item);
     }
     public void HolzCraften()
     {
         item = FindObjectOfType<Log>();
         inventory.RemoveItem(item);
-        item = FindObjectOfType<Iron_Ore>(); //holz dann noch einfügen
+        item = FindObjectOfType<plank>(); 
+        inventory.AddItem(item);
+        inventory.AddItem(item);
+        inventory.AddItem(item);
+        inventory.AddItem(item);
+    }
+    public void StickCraften()
+    {
+        item = FindObjectOfType<plank>();
+        inventory.RemoveItem(item);
+        inventory.RemoveItem(item);
+        item = FindObjectOfType<sticks>(); 
+        inventory.AddItem(item);
+        inventory.AddItem(item);
+        inventory.AddItem(item);
+        inventory.AddItem(item);
+    }
+    public void ShovelCraften()
+    {
+        item = FindObjectOfType<sticks>();
+        inventory.RemoveItem(item);
+        inventory.RemoveItem(item);
+        item = FindObjectOfType<iron_ingot>();
+        inventory.RemoveItem(item);
+        item = FindObjectOfType<shovel>();
+        inventory.AddItem(item);
+    }
+    public void PickAxeCraften()
+    {
+        item = FindObjectOfType<sticks>();
+        inventory.RemoveItem(item);
+        inventory.RemoveItem(item);
+        item = FindObjectOfType<iron_ingot>();
+        inventory.RemoveItem(item);
+        inventory.RemoveItem(item);
+        inventory.RemoveItem(item);
+        item = FindObjectOfType<pickaxe>();
+        inventory.AddItem(item);
+    }
+    public void AxeCraften()
+    {
+        item = FindObjectOfType<sticks>();
+        inventory.RemoveItem(item);
+        inventory.RemoveItem(item);
+        item = FindObjectOfType<iron_ingot>();
+        inventory.RemoveItem(item);
+        inventory.RemoveItem(item);
+        inventory.RemoveItem(item);
+        item = FindObjectOfType<Axe>();
         inventory.AddItem(item);
     }
 }
