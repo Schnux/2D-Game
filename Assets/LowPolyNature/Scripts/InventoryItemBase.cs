@@ -29,7 +29,8 @@ public class InteractableItemBase : MonoBehaviour
 
 public class InventoryItemBase : InteractableItemBase
 {
-	public string test;
+
+	private Controller controller;
 	public InventorySlot Slot
     {
         get; set;
@@ -74,15 +75,12 @@ public class InventoryItemBase : InteractableItemBase
 
 	public void GetName(string name){
 		
-
-		test = name;
-		Block_Name ();
-
+		if (name == "Dirt") {
+	
+			Debug.Log ("Dirt");
+	
+		}
 	}
 
-	public string Block_Name(){
 
-		return test;
-
-	}
 }

@@ -10,8 +10,8 @@ public class Controller : MonoBehaviour {
 	public float playerJumpForceVertical;
     public float jumpForce;
     public float High;
-	private GameObject newBlock;
-	public GameObject Dirt;
+	/*private GameObject newBlock;
+	public GameObject Dirt;*/
 	public string Material_Name;
 
 
@@ -27,17 +27,20 @@ public class Controller : MonoBehaviour {
 	void Start () {
 		rb = GetComponent<Rigidbody2D>();
 		chunk = GetComponent<Chunk> ();
-		inventoryItemBase = GetComponent<Dirt> ();
+
 
 
 	}
-		
+	public void Dirt(){
+		Debug.Log ("1");
+
+	}
 	void Update(){
 		if (Input.GetButtonDown ("Jump") && landed == true) {
 			rb.AddForce (Vector2.up * jumpForce, ForceMode2D.Impulse);
 			landed = false;
 		}
-		Material_Name = inventoryItemBase.Block_Name ();
+
 	
 		/*if (Input.GetMouseButtonDown (1)) {
 			newBlock.transform.localPosition = Input.mousePosition;
