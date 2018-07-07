@@ -5,6 +5,7 @@ using UnityEngine;
 public class CraftingScript : MonoBehaviour {
     private Inventory inventory;
     public InventoryItemBase item;
+ 
     // Use this for initialization
     void Start() {
         
@@ -17,10 +18,14 @@ public class CraftingScript : MonoBehaviour {
     }
     public void IronIngotCraften()
     {
-        item = FindObjectOfType<Iron_Ore>();
-        inventory.RemoveItem(item);
-        item = FindObjectOfType<iron_ingot>(); //Ingot item dann noch einfügen
-        inventory.AddItem(item);
+       
+        
+            item = FindObjectOfType<Iron_Ore>();
+            inventory.RemoveItem(item);
+            item = FindObjectOfType<iron_ingot>(); //Ingot item dann noch einfügen
+            inventory.AddItem(item);
+        
+        
     }
     public void CopperIngotCraften()
     {
@@ -81,7 +86,7 @@ public class CraftingScript : MonoBehaviour {
         inventory.RemoveItem(item);
         inventory.RemoveItem(item);
         inventory.RemoveItem(item);
-        item = FindObjectOfType<axe>();
+        item = FindObjectOfType<Axe>();
         inventory.AddItem(item);
     }
 }
