@@ -62,5 +62,12 @@ public class ItemClickHandler : MonoBehaviour
 
         }
     }
+    public void Flo()
+    {
+
+
+
+
+    }
 
 }
