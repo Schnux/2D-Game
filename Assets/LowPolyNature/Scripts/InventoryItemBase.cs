@@ -75,12 +75,76 @@ public class InventoryItemBase : InteractableItemBase
 
 	public void GetName(string name){
 		
-		if (name == "Dirt") {
-	
+		if (name == "Dirt")
+        {
 			Debug.Log ("Dirt");
-	
-		}
-	}
+        }
+
+        if (name == "Grass")
+        {
+            Debug.Log("Grass");
+        }
+
+        if (name == "Copper_Ore")
+        {
+            Debug.Log("Copper_Ore");
+        }
+
+        if (name == "Stone")
+        {
+            Debug.Log("Stone");
+        }
+
+        if (name == "pickaxe")
+        {
+            Debug.Log("pickaxe");
+        }
+
+        if (name == "axe")
+        {
+            Debug.Log("axe");
+        }
+
+        if (name == "copper_ingot")
+        {
+            Debug.Log("copper_ingot");
+        }
+
+        if (name == "Iron_Ore")
+        {
+            Debug.Log("Iron_Ore");
+        }
+
+        if (name == "iron_ingot")
+        {
+            Debug.Log("iron_ingot");
+        }
+
+        if (name == "leaves")
+        {
+            Debug.Log("leaves");
+        }
+
+        if (name == "log")
+        {
+            Debug.Log("log");
+        }
+
+        if (name == "plank")
+        {
+            Debug.Log("plank");
+        }
+
+        if (name == "shovel")
+        {
+            Debug.Log("shovel");
+        }
+
+        if (name == "sticks")
+        {
+            Debug.Log("sticks");
+        }
+    }
 
 
 }
