@@ -88,7 +88,7 @@ public class HUD : MonoBehaviour {
 
                 if(itemCount == 0)
                 {
-                    image.enabled = false;
+                    image.enabled = true;
                     image.sprite = null;
                 }
                 break;
