@@ -83,14 +83,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1699321019253868}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97c1a24564ef11846987775cdcafe848, type: 3}
+  m_Script: {fileID: 11500000, guid: 709f0e5d95e24a24896bd6ba4deae701, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Name: axe
   Image: {fileID: 21300000, guid: 21ce783c163681244a3cbe00a80074cf, type: 3}
   InteractText: Press F to pickup the item
   ItemType: 0
-  test: 
   PickPosition: {x: 0, y: 0, z: 0}
   PickRotation: {x: 0, y: 0, z: 0}
   DropRotation: {x: 0, y: 0, z: 0}

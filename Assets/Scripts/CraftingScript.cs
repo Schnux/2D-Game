@@ -86,7 +86,7 @@ public class CraftingScript : MonoBehaviour {
         inventory.RemoveItem(item);
         inventory.RemoveItem(item);
         inventory.RemoveItem(item);
-        item = FindObjectOfType<Axe>();
+        item = FindObjectOfType<axe>();
         inventory.AddItem(item);
     }
 }
