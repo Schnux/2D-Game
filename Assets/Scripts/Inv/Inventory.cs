@@ -12,6 +12,12 @@ public class Inventory : MonoBehaviour
     public event EventHandler<InventoryEventArgs> ItemAdded;
     public event EventHandler<InventoryEventArgs> ItemRemoved;
     public event EventHandler<InventoryEventArgs> ItemUsed;
+    public int ironorecraft = 0;  //Crafting variablen
+    public int copperorecraft = 0;
+    public int logcraft = 0;
+    public int plankscraft = 0;
+    public int ironingotcraft = 0;
+    public int stickscraft = 0;
 
     public Inventory()
     {
@@ -55,6 +61,18 @@ public class Inventory : MonoBehaviour
             if (ItemAdded != null)
             {
                 ItemAdded(this, new InventoryEventArgs(item));
+                if (item == FindObjectOfType<Iron_Ore>())          //Wenn Items geadded werden,variable fuer craftingcheck erhoehen
+                { ironorecraft = ironorecraft + 1; }
+                if (item == FindObjectOfType<Copper_Ore>())
+                { copperorecraft = copperorecraft + 1; }
+                if (item == FindObjectOfType<Log>())
+                { logcraft = logcraft + 1; }
+                if (item == FindObjectOfType<plank>())
+                { plankscraft = plankscraft + 1; }
+                if (item == FindObjectOfType<iron_ingot>())
+                { ironingotcraft = ironingotcraft + 1; }
+                if (item == FindObjectOfType<sticks>())
+                { stickscraft = stickscraft + 1; }
             }
 
         }
@@ -79,6 +97,20 @@ public class Inventory : MonoBehaviour
                 if (ItemRemoved != null)
                 {
                     ItemRemoved(this, new InventoryEventArgs(item));
+                    if (item == FindObjectOfType<Iron_Ore>())          //Wenn Items removed werden,variable fuer craftingcheck verkleinern
+                    { ironorecraft = ironorecraft - 1; }
+                    if (item == FindObjectOfType<Copper_Ore>())
+                    { copperorecraft = copperorecraft - 1; }
+                    if (item == FindObjectOfType<Log>())
+                    { logcraft = logcraft - 1; }
+                    if (item == FindObjectOfType<plank>())
+                    { plankscraft = plankscraft - 1; }
+                    if (item == FindObjectOfType<iron_ingot>())
+                    { ironingotcraft = ironingotcraft - 1; }
+                    if (item == FindObjectOfType<sticks>())
+                    { stickscraft = stickscraft - 1; }
+
+
                 }
                 break;
             }

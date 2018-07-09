@@ -18,75 +18,94 @@ public class CraftingScript : MonoBehaviour {
     }
     public void IronIngotCraften()
     {
-       
-        
+
+        if (inventory.ironorecraft >= 1)
+        {
             item = FindObjectOfType<Iron_Ore>();
             inventory.RemoveItem(item);
             item = FindObjectOfType<iron_ingot>(); //Ingot item dann noch einfügen
             inventory.AddItem(item);
-        
+        }
         
     }
     public void CopperIngotCraften()
     {
-        item = FindObjectOfType<Copper_Ore>();
-        inventory.RemoveItem(item);
-        item = FindObjectOfType<copper_ingot>(); //ingot item dann noch einfügen
-        inventory.AddItem(item);
+        if (inventory.copperorecraft >= 1)
+        {
+            item = FindObjectOfType<Copper_Ore>();
+            inventory.RemoveItem(item);
+            item = FindObjectOfType<copper_ingot>(); //ingot item dann noch einfügen
+            inventory.AddItem(item);
+        }
     }
     public void HolzCraften()
     {
-        item = FindObjectOfType<Log>();
-        inventory.RemoveItem(item);
-        item = FindObjectOfType<plank>(); 
-        inventory.AddItem(item);
-        inventory.AddItem(item);
-        inventory.AddItem(item);
-        inventory.AddItem(item);
+        if (inventory.logcraft >= 1)
+        {
+            item = FindObjectOfType<Log>();
+            inventory.RemoveItem(item);
+            item = FindObjectOfType<plank>();
+            inventory.AddItem(item);
+            inventory.AddItem(item);
+            inventory.AddItem(item);
+            inventory.AddItem(item);
+        }
     }
     public void StickCraften()
     {
-        item = FindObjectOfType<plank>();
-        inventory.RemoveItem(item);
-        inventory.RemoveItem(item);
-        item = FindObjectOfType<sticks>(); 
-        inventory.AddItem(item);
-        inventory.AddItem(item);
-        inventory.AddItem(item);
-        inventory.AddItem(item);
+        if (inventory.plankscraft >= 2)
+        {
+            item = FindObjectOfType<plank>();
+            inventory.RemoveItem(item);
+            inventory.RemoveItem(item);
+            item = FindObjectOfType<sticks>();
+            inventory.AddItem(item);
+            inventory.AddItem(item);
+            inventory.AddItem(item);
+            inventory.AddItem(item);
+        }
     }
     public void ShovelCraften()
     {
-        item = FindObjectOfType<sticks>();
-        inventory.RemoveItem(item);
-        inventory.RemoveItem(item);
-        item = FindObjectOfType<iron_ingot>();
-        inventory.RemoveItem(item);
-        item = FindObjectOfType<shovel>();
-        inventory.AddItem(item);
+        if (inventory.ironingotcraft >= 1 && inventory.stickscraft >= 2)
+        {
+            item = FindObjectOfType<sticks>();
+            inventory.RemoveItem(item);
+            inventory.RemoveItem(item);
+            item = FindObjectOfType<iron_ingot>();
+            inventory.RemoveItem(item);
+            item = FindObjectOfType<shovel>();
+            inventory.AddItem(item);
+        }
     }
     public void PickAxeCraften()
     {
-        item = FindObjectOfType<sticks>();
-        inventory.RemoveItem(item);
-        inventory.RemoveItem(item);
-        item = FindObjectOfType<iron_ingot>();
-        inventory.RemoveItem(item);
-        inventory.RemoveItem(item);
-        inventory.RemoveItem(item);
-        item = FindObjectOfType<pickaxe>();
-        inventory.AddItem(item);
+        if (inventory.ironingotcraft >= 3 && inventory.stickscraft >= 2)
+        {
+            item = FindObjectOfType<sticks>();
+            inventory.RemoveItem(item);
+            inventory.RemoveItem(item);
+            item = FindObjectOfType<iron_ingot>();
+            inventory.RemoveItem(item);
+            inventory.RemoveItem(item);
+            inventory.RemoveItem(item);
+            item = FindObjectOfType<pickaxe>();
+            inventory.AddItem(item);
+        }
     }
     public void AxeCraften()
     {
-        item = FindObjectOfType<sticks>();
-        inventory.RemoveItem(item);
-        inventory.RemoveItem(item);
-        item = FindObjectOfType<iron_ingot>();
-        inventory.RemoveItem(item);
-        inventory.RemoveItem(item);
-        inventory.RemoveItem(item);
-        item = FindObjectOfType<axe>();
-        inventory.AddItem(item);
+        if (inventory.ironingotcraft >= 3 && inventory.stickscraft >= 2)
+        {
+            item = FindObjectOfType<sticks>();
+            inventory.RemoveItem(item);
+            inventory.RemoveItem(item);
+            item = FindObjectOfType<iron_ingot>();
+            inventory.RemoveItem(item);
+            inventory.RemoveItem(item);
+            inventory.RemoveItem(item);
+            item = FindObjectOfType<axe>();
+            inventory.AddItem(item);
+        }
     }
 }
