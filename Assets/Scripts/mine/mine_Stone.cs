@@ -64,6 +64,16 @@ public class mine_Stone : MonoBehaviour {
 				this.touching = this.touching + 1;
 
 			}
+			if (hit.tag == "Grass") {
+
+				this.touching = this.touching + 1;
+
+			}
+			if (hit.tag == "Stone") {
+
+				this.touching = this.touching + 1;
+
+			}
 
 		}
 	}
