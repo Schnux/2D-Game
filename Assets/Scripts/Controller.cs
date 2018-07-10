@@ -12,10 +12,14 @@ public class Controller : MonoBehaviour {
     public float High;
 	private GameObject newBlock;
 	public GameObject Dirt;
-	public static string Material_Name  ;
-	private static string Material_Name_Old  ;
-	private static string Material_Name_New;
-
+	public GameObject Grass;
+	public GameObject Stone;
+	public GameObject Iron_Ore;
+	public GameObject Copper_Ore;
+	public GameObject Log;
+	public GameObject Leaves;
+	public GameObject Plankes;
+	public static string Material_Name;
 
 
     private float jumpDirection;
@@ -27,45 +31,66 @@ public class Controller : MonoBehaviour {
 	private InventoryItemBase inventoryItemBase;
 	public Chunk chunk;
 
-	// Use this for initialization
+
 	void Start () {
 		rb = GetComponent<Rigidbody2D>();
 		chunk = GetComponent<Chunk> ();
-		Material_Name_New = "1";
-		Material_Name_Old = "1";
 
 
 
 	}
-	public void dirt(string name){
+	public void Name(string name){
 		Material_Name = name;
-		Material_Name_New = Material_Name;
-		//Debug.Log (Material_Name);
 
 	}
 	void Update(){
 
-		if (Material_Name_New != Material_Name_Old) {
-
-			Material_Name = Material_Name_New;
-			Material_Name_Old = Material_Name_New;
-			Debug.Log (Material_Name_New);
-		}
 
 		if (Input.GetButtonDown ("Jump") && landed == true) {
 			rb.AddForce (Vector2.up * jumpForce, ForceMode2D.Impulse);
 			landed = false;
 		}
-		if (Material_Name == "Dirt") {
+
+		switch (Material_Name) {
+		case "Dirt":
 			newBlock = Dirt;
-			Debug.Log ("yes");
+			break;
+		case "Grass":
+			newBlock = Grass;
+			break;
+		case "Stone":
+			newBlock = Stone;
+			break;
+		case "Iron_Ore":
+			newBlock = Iron_Ore;
+			break;
+		case "Copper_Ore":
+			newBlock = Copper_Ore;
+			break;
+		case "log":
+			newBlock = Log;
+			break;
+		case "leaves":
+			newBlock = Leaves;
+			break;
+		case "plank":
+			newBlock = Plankes;
+			break;
 		}
+
+
+
 	
 		if (Input.GetMouseButtonDown (1)) {
-			newBlock.transform.localPosition = Input.mousePosition;
-			//Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-			Instantiate (newBlock);
 
+			//Ray2D ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+		
+			Vector3 position;
+			Instantiate (newBlock);
+			newBlock.transform.localPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+			position = newBlock.transform.localPosition;
+			position = new Vector3(newBlock.transform.position.x, newBlock.transform.position.y, 0f);
+			newBlock.transform.localPosition = position;
 		}
 	
 

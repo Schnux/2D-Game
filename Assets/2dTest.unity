@@ -6067,6 +6067,46 @@ Prefab:
       propertyPath: Dirt
       value: 
       objectReference: {fileID: 100002, guid: a871a83d0fe844840bfe4b6b55931f03, type: 2}
+    - target: {fileID: 114580643566064108, guid: b0a7681e86d289345b4a4d45728bbd41,
+        type: 2}
+      propertyPath: Grass
+      value: 
+      objectReference: {fileID: 100002, guid: f7e788e8cb031a240a065435420d7906, type: 2}
+    - target: {fileID: 114580643566064108, guid: b0a7681e86d289345b4a4d45728bbd41,
+        type: 2}
+      propertyPath: Stone
+      value: 
+      objectReference: {fileID: 100000, guid: 6073c2935723f71498bcb36ab5ea7543, type: 2}
+    - target: {fileID: 114580643566064108, guid: b0a7681e86d289345b4a4d45728bbd41,
+        type: 2}
+      propertyPath: Iron_Ore
+      value: 
+      objectReference: {fileID: 1654031867221150, guid: d2bb185ff5961174c8fc9f87e4301067,
+        type: 2}
+    - target: {fileID: 114580643566064108, guid: b0a7681e86d289345b4a4d45728bbd41,
+        type: 2}
+      propertyPath: Copper_Ore
+      value: 
+      objectReference: {fileID: 1149485591422002, guid: af94a2d2ffcab314692b59e1b94ab43d,
+        type: 2}
+    - target: {fileID: 114580643566064108, guid: b0a7681e86d289345b4a4d45728bbd41,
+        type: 2}
+      propertyPath: Log
+      value: 
+      objectReference: {fileID: 1464337505988504, guid: fb7155a0d79214b4db9df91731c32ea3,
+        type: 2}
+    - target: {fileID: 114580643566064108, guid: b0a7681e86d289345b4a4d45728bbd41,
+        type: 2}
+      propertyPath: Leaves
+      value: 
+      objectReference: {fileID: 1926793756441166, guid: 8c994635ccc50914f9e8844b489cd89f,
+        type: 2}
+    - target: {fileID: 114580643566064108, guid: b0a7681e86d289345b4a4d45728bbd41,
+        type: 2}
+      propertyPath: Plankes
+      value: 
+      objectReference: {fileID: 1220907035228556, guid: a6e0c8514379fee4d901cc12423005da,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b0a7681e86d289345b4a4d45728bbd41, type: 2}
   m_IsPrefabParent: 0

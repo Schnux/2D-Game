@@ -72,76 +72,66 @@ public class InventoryItemBase : InteractableItemBase
     public bool UseItemAfterPickup = false;
 
 	public void GetName(string name){
+		switch (name) {
+		case "Dirt":
+			controller.Name(name);
+			break;
 		
-		if (name == "Dirt")
-        {
-			controller.dirt(name);
-        }
+		case "Grass":
+			controller.Name(name);
+			break;
+		
+		case "Copper_Ore":
+			controller.Name(name);
+			break;
 
-        if (name == "Grass")
-        {
-            Debug.Log("Grass");
-        }
+		case "Stone":
+			controller.Name(name);
+			break;
 
-        if (name == "Copper_Ore")
-        {
-            Debug.Log("Copper_Ore");
-        }
+		case "Iron_Ore":
+			controller.Name(name);
+			break;
 
-        if (name == "Stone")
-        {
-            Debug.Log("Stone");
-        }
+		case "pickaxe":
+			controller.Name(name);
+			break;
 
-        if (name == "pickaxe")
-        {
-            Debug.Log("pickaxe");
-        }
+		case "axe":
+			controller.Name(name);
+			break;
 
-        if (name == "axe")
-        {
-            Debug.Log("axe");
-        }
+		case "copper_ingot":
+			controller.Name(name);
+			break;
 
-        if (name == "copper_ingot")
-        {
-            Debug.Log("copper_ingot");
-        }
+		case "iron_ingot":
+			controller.Name(name);
+			break;
 
-        if (name == "Iron_Ore")
-        {
-            Debug.Log("Iron_Ore");
-        }
+		case "leaves":
+			controller.Name(name);
+			break;
 
-        if (name == "iron_ingot")
-        {
-            Debug.Log("iron_ingot");
-        }
+		case "log":
+			controller.Name(name);
+			break;
+		
+		case "plank":
+			controller.Name(name);
+			break;
 
-        if (name == "leaves")
-        {
-            Debug.Log("leaves");
-        }
+		case "shovel":
+			controller.Name(name);
+			break;
 
-        if (name == "log")
-        {
-            Debug.Log("log");
-        }
+		case "sticks":
+			controller.Name(name);
+			break;
+		}
 
-        if (name == "plank")
-        {
-            Debug.Log("plank");
-        }
 
-        if (name == "shovel")
-        {
-            Debug.Log("shovel");
-        }
 
-        if (name == "sticks")
-        {
-            Debug.Log("sticks");
-        }
 
     }
 
