@@ -20,7 +20,7 @@ public class Controller : MonoBehaviour {
 	public GameObject Leaves;
 	public GameObject Plankes;
 	public static string Material_Name;
-
+	private int anzahl;
 
     private float jumpDirection;
 	public static bool landed = true;
@@ -30,12 +30,13 @@ public class Controller : MonoBehaviour {
 	private Vector2 velocity;
 	private InventoryItemBase inventoryItemBase;
 	public Chunk chunk;
-
+	public InventoryItemBase item;
+	private Inventory inventory;
 
 	void Start () {
 		rb = GetComponent<Rigidbody2D>();
 		chunk = GetComponent<Chunk> ();
-
+		inventory = FindObjectOfType<Inventory>();
 
 
 	}
@@ -54,27 +55,43 @@ public class Controller : MonoBehaviour {
 		switch (Material_Name) {
 		case "Dirt":
 			newBlock = Dirt;
+			item = FindObjectOfType<Dirt> ();
+			anzahl = inventory.dirtcraft;
 			break;
 		case "Grass":
 			newBlock = Grass;
+			item = FindObjectOfType<Grass> ();
+			anzahl = inventory.grasscraft;
 			break;
 		case "Stone":
 			newBlock = Stone;
+			item = FindObjectOfType<Stone> ();
+			anzahl = inventory.stonecraft;
 			break;
 		case "Iron_Ore":
 			newBlock = Iron_Ore;
+			item = FindObjectOfType<Iron_Ore> ();
+			anzahl = inventory.ironorecraft;
 			break;
 		case "Copper_Ore":
 			newBlock = Copper_Ore;
+			item = FindObjectOfType<Copper_Ore> ();
+			anzahl = inventory.copperorecraft;
 			break;
 		case "log":
 			newBlock = Log;
+			item = FindObjectOfType<Log> ();
+			anzahl = inventory.logcraft;
 			break;
 		case "leaves":
 			newBlock = Leaves;
+			item = FindObjectOfType<Leaves> ();
+			anzahl = inventory.leavescraft;
 			break;
 		case "plank":
 			newBlock = Plankes;
+			item = FindObjectOfType<plank> ();
+			anzahl = inventory.plankscraft;
 			break;
 		}
 
@@ -84,16 +101,17 @@ public class Controller : MonoBehaviour {
 		if (Input.GetMouseButtonDown (1)) {
 
 			//Ray2D ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-		
+			if(anzahl >= 1){
 			Vector3 position;
 			Instantiate (newBlock);
 			newBlock.transform.localPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 			position = newBlock.transform.localPosition;
 			position = new Vector3(newBlock.transform.position.x, newBlock.transform.position.y, 0f);
 			newBlock.transform.localPosition = position;
+			inventory.RemoveItem(item);
 		}
 	
-
+		}
 
 			
 	}

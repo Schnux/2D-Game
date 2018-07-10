@@ -19,6 +19,11 @@ public class Inventory : MonoBehaviour
     public int ironingotcraft = 0;
     public int stickscraft = 0;
 
+	public int stonecraft = 0;
+	public int grasscraft = 0;
+	public int dirtcraft = 0;
+	public int leavescraft = 0;
+
     public Inventory()
     {
         for (int i = 0; i < SLOTS; i++)
@@ -73,6 +78,14 @@ public class Inventory : MonoBehaviour
                 { ironingotcraft = ironingotcraft + 1; }
                 if (item == FindObjectOfType<sticks>())
                 { stickscraft = stickscraft + 1; }
+				if (item == FindObjectOfType<Dirt>())
+				{ dirtcraft = dirtcraft + 1; }
+				if (item == FindObjectOfType<Grass>())
+				{ grasscraft = grasscraft + 1; }
+				if (item == FindObjectOfType<Stone>())
+				{ stonecraft = stonecraft + 1; }
+				if (item == FindObjectOfType<Leaves>())
+				{ leavescraft = leavescraft + 1; }
             }
 
         }
@@ -109,6 +122,14 @@ public class Inventory : MonoBehaviour
                     { ironingotcraft = ironingotcraft - 1; }
                     if (item == FindObjectOfType<sticks>())
                     { stickscraft = stickscraft - 1; }
+					if (item == FindObjectOfType<Dirt>())
+					{ dirtcraft = dirtcraft - 1; }
+					if (item == FindObjectOfType<Grass>())
+					{ grasscraft = grasscraft - 1; }
+					if (item == FindObjectOfType<Stone>())
+					{ stonecraft = stonecraft - 1; }
+					if (item == FindObjectOfType<Leaves>())
+					{ leavescraft = leavescraft - 1; }
 
 
                 }
