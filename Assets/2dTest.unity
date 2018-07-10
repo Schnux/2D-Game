@@ -2607,6 +2607,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2107743723}
+  - {fileID: 1629564959}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6048,6 +6049,11 @@ Prefab:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 114580643566064108, guid: b0a7681e86d289345b4a4d45728bbd41,
+        type: 2}
+      propertyPath: Dirt
+      value: 
+      objectReference: {fileID: 100002, guid: a871a83d0fe844840bfe4b6b55931f03, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b0a7681e86d289345b4a4d45728bbd41, type: 2}
   m_IsPrefabParent: 0
@@ -7798,6 +7804,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be1b6f52a2d824d49b01f8505d9e0ad1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ironorecraft: 0
+  copperorecraft: 0
+  logcraft: 0
+  plankscraft: 0
+  ironingotcraft: 0
+  stickscraft: 0
 --- !u!4 &1166080542
 Transform:
   m_ObjectHideFlags: 0
@@ -7809,7 +7821,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1184965059
 GameObject:
@@ -11116,8 +11128,8 @@ RectTransform:
   - {fileID: 1676742426}
   - {fileID: 2130847714}
   - {fileID: 513800301}
-  m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_Father: {fileID: 398919834}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -11330,7 +11342,7 @@ Transform:
   - {fileID: 762436952}
   - {fileID: 2120366191}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1676742425
 GameObject:

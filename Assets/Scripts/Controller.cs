@@ -10,9 +10,12 @@ public class Controller : MonoBehaviour {
 	public float playerJumpForceVertical;
     public float jumpForce;
     public float High;
-	/*private GameObject newBlock;
-	public GameObject Dirt;*/
-	public string Material_Name;
+	private GameObject newBlock;
+	public GameObject Dirt;
+	public static string Material_Name  ;
+	private static string Material_Name_Old  ;
+	private static string Material_Name_New;
+
 
 
     private float jumpDirection;
@@ -23,40 +26,50 @@ public class Controller : MonoBehaviour {
 	private Vector2 velocity;
 	private InventoryItemBase inventoryItemBase;
 	public Chunk chunk;
+
 	// Use this for initialization
 	void Start () {
 		rb = GetComponent<Rigidbody2D>();
 		chunk = GetComponent<Chunk> ();
+		Material_Name_New = "1";
+		Material_Name_Old = "1";
 
 
 
 	}
-	public void Dirt(){
-		Debug.Log ("1");
+	public void dirt(string name){
+		Material_Name = name;
+		Material_Name_New = Material_Name;
+		//Debug.Log (Material_Name);
 
 	}
 	void Update(){
+
+		if (Material_Name_New != Material_Name_Old) {
+
+			Material_Name = Material_Name_New;
+			Material_Name_Old = Material_Name_New;
+			Debug.Log (Material_Name_New);
+		}
+
 		if (Input.GetButtonDown ("Jump") && landed == true) {
 			rb.AddForce (Vector2.up * jumpForce, ForceMode2D.Impulse);
 			landed = false;
 		}
-
+		if (Material_Name == "Dirt") {
+			newBlock = Dirt;
+			Debug.Log ("yes");
+		}
 	
-		/*if (Input.GetMouseButtonDown (1)) {
+		if (Input.GetMouseButtonDown (1)) {
 			newBlock.transform.localPosition = Input.mousePosition;
+			//Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 			Instantiate (newBlock);
 
 		}
 	
 
-		if(Input.GetKeyDown(KeyCode.O)){
-			Material_Name = "Dirt";
 
-		}
-		if (Material_Name == "Dirt") {
-
-			newBlock = Dirt;
-		}*/
 			
 	}
 

@@ -29,14 +29,12 @@ public class InteractableItemBase : MonoBehaviour
 
 public class InventoryItemBase : InteractableItemBase
 {
-
-	private Controller controller;
+	Controller controller = new Controller ();
+	//private Controller controller;
 	public InventorySlot Slot
     {
         get; set;
     }
-
-
 
 	public virtual void OnUse()
     {
@@ -77,7 +75,7 @@ public class InventoryItemBase : InteractableItemBase
 		
 		if (name == "Dirt")
         {
-			Debug.Log ("Dirt");
+			controller.dirt(name);
         }
 
         if (name == "Grass")
@@ -144,6 +142,7 @@ public class InventoryItemBase : InteractableItemBase
         {
             Debug.Log("sticks");
         }
+
     }
 
 
