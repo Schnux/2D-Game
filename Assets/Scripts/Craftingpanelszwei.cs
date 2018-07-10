@@ -22,9 +22,10 @@ public class Craftingpanelszwei : MonoBehaviour
     private bool offensieben = false;
     public void Update()
     {
+        inventory = FindObjectOfType<Inventory>();
         if (Input.GetKeyDown(KeyCode.K))
         {
-            inventory = FindObjectOfType<Inventory>();
+            
             anfangpanel();
 
         }
